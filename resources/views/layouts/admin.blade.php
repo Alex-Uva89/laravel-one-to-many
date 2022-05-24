@@ -13,17 +13,17 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="bg-dark">
+    <body class="bg-secondary">
         @include('partials.headeradmin')
 
         <main class="py-4">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-md-2 pt-5">
-                        <div><a href="{{ route('admin.posts.index') }}">Tutti i post</a></div>
-                        <div><a href="{{ route('admin.posts.create') }}">Crea nuovo post</a></div>
-                        <div><a href="{{ route('admin.categories.index') }}">Tutte le categorie</a></div>
-                        <div><a href="{{ route('admin.categories.create') }}">Crea nuova categoria</a></div>
+                    <div class="col-12 col-md-2 pt-5 ps-5">
+                        <div class="py-2"><a href="{{ route('admin.posts.index') }}" class="btn btn-info float-right">Tutti i post</a></div>
+                        <div class="py-2"><a href="{{ route('admin.posts.create') }}" class="btn btn-info float-right">Crea nuovo post</a></div>
+                        <div class="py-2"><a href="{{ route('admin.categories.index') }}" class="btn btn-info float-right">Tutte le categorie</a></div>
+                        <div class="py-2"><a href="{{ route('admin.categories.create') }}" class="btn btn-info float-right">Crea nuova categoria</a></div>
                     </div>
                     <div class="col-12 col-md-10">
                         @yield('pageContent')
