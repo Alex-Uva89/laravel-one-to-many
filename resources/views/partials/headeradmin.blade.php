@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg border bg-white navbar-light" style="--bs-bg-opacity: .7;">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">{{ config('app.name', 'Laravel') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
 
                 <li class="nav-item">
                     @auth
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.posts.index') }}">Visualizza tutti i post</a>
+                        <a class="nav-link active link-light" aria-current="page" href="{{ route('admin.posts.index') }}">Visualizza tutti i post</a>
                     @endauth
                     @guest
                         <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Visualizza tutti i post</a>
@@ -31,7 +31,9 @@
                     @endif
                     @else
                         <li class="nav-item dropdown">
+                            
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <img src="https://picsum.photos/id/2/40" alt="immagine profilo" class="border rounded-circle"> 
                                 {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,6 +42,15 @@
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        {{-- da creare rotta pagina personale --}}
+                                        Il mio profilo
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

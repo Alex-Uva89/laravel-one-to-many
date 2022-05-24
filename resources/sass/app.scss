@@ -9,6 +9,8 @@
 
 
 // Tag Personali
+
+
 .overlay {
     display: flex;
     position: fixed;
@@ -25,7 +27,95 @@
 }
 
 .bg-magic {
-    background: rgb(239,0,242);
-    background: linear-gradient(284deg, rgba(239,0,242,1) 0%, rgba(255,255,255,1) 50%, rgba(242,203,0,1) 100%);
+    height: 100%;
+    animation: color-change-5x 8s linear infinite alternate both;
 }
+
+@keyframes color-change-5x {
+    0% {
+      background: #19dcea;
+    }
+    25% {
+      background: #b22cff;
+    }
+    50% {
+      background: #ea2222;
+    }
+    75% {
+      background: #f5be10;
+    }
+    100% {
+      background: #3bd80d;
+    }
+  }
+
+.text-focus-in{   
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    text-transform: uppercase;
+}
+
+.text-color-animate{
+    background-image: linear-gradient(-225deg,#231557 0%,#44107a 29%,#ff1361 67%,#fff800 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 190px;
+
+}
+
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.bounce-bottom {
+	    animation: bounce-bottom 1.5s both;
+}
+
+@keyframes bounce-bottom {
+    0% {
+        transform: translateY(300px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(100px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(12px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateY(6px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+  }
+  
 
