@@ -1,16 +1,14 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-.btn-pink{
-    color: #fff;
-    background-color: #ff4ad8;
-}
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
+// Tag Personali
 .overlay {
     display: flex;
     position: fixed;
@@ -25,8 +23,9 @@
         border-radius: 1rem;
     }
 }
-button.navbar-toggler {
-    // .hamb {
-    //     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    // }
+
+.bg-magic {
+    background: rgb(239,0,242);
+    background: linear-gradient(284deg, rgba(239,0,242,1) 0%, rgba(255,255,255,1) 50%, rgba(242,203,0,1) 100%);
 }
+
